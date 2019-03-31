@@ -21,11 +21,22 @@
 *操作RTS游戏要求不仅具有强大的宏观策略，而且具有熟练而细微的水平操作*
 -   Recently, great progress has been made in micro level execution, while complete solutions for macro strategies are still lacking.
 
+*近期，细微的水平操作有了巨大的进步，再此同时宏观策略的解决方案仍然缺乏*
 -   In this paper, we propose a novel learning-based Hierarchical Macro Strategy model for mastering MOBA games, a sub-genre of RTS games.
+
+*在这个论文中，我们打算将新奇的基于学习分层宏观策略模型用于实时策略的一个领域——MOBA类游戏中*
 -   Trained by the Hierarchical Macro Strategy model, agents explicitly make macro strategy decisions and further guide their micro level execution.
--   Moreover, each of the agents makes independent strategy decisions, while simultaneously communicating with the allies through leveraging a novel imitated crossagent communication mechanism.
+
+*通过训练这个分层宏观策略模型，游戏机器人清晰地在宏观策略中做出决定，并且更进一步地指导细微的水平操作*
+-   Moreover, each of the agents makes independent strategy decisions, while simultaneously communicating with the allies through leveraging a novel imitated cross agent communication mechanism.
+
+*此外，每一个机器人都能独立的做出决定，同时与盟军进行交流通过新奇的限制来促使反向代理交流机制的改变*
 -   We perform comprehensive evaluations on a popular 5v5 Multiplayer Online Battle Arena (MOBA) game.
+
+*我们在流行的5v5MOBA类游戏中得出了综合的评估*
 -   Our 5-AI team achieves a 48% winning rate against human player teams which are ranked top 1% in the player ranking system.
+
+*我们的五AI队伍获得了48%的胜率在对抗人类玩家队伍，这些人类队伍在排名系统中位于1%*
 
 # Introduction<a id="sec-2" name="sec-2"></a>
 
