@@ -180,6 +180,7 @@
 
 *据我们所知，我们提议HMS模型是最好的基于学习的模型，这模型清楚地建模了宏观策略用于MOBA类游戏中*
 -   HMS used supervised learning to learn macro strategy operation and corresponding micro level execution from high quality replays.
+
 -   A trained HMS model can be further used as an initial policy for reinforcement learning framework.
 -   Our proposed HMS model exhibits a strong potential in MOBA games.
 -   It may be generalized to more RTS games with appropriate adaptations.
