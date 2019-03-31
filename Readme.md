@@ -15,4 +15,4 @@
 # 目录<a id="sec-2" name="sec-2"></a>
 
 -   'Hierarchical Macro Strategy Model for MOBA Game AI'
--   {用于MOBA类AI的分级宏观策略模型}
+-   *用于MOBA类AI的分级宏观策略模型*
