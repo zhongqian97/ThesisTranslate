@@ -4,6 +4,29 @@
 <ul>
 <li><a href="#sec-1">1. Abstract</a></li>
 <li><a href="#sec-2">2. Introduction</a></li>
+<li><a href="#sec-3">3. Multiplayer Online Battle Arena (MOBA) Games</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Game Description</a></li>
+<li><a href="#sec-3-2">3.2. Computational Complexity</a></li>
+<li><a href="#sec-3-3">3.3. MOBA AI Macro Strategy Architecture</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Hierarchical Macro Strategy Model</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Model Overview</a></li>
+<li><a href="#sec-4-2">4.2. Attention Layer</a></li>
+<li><a href="#sec-4-3">4.3. Phase layer</a></li>
+<li><a href="#sec-4-4">4.4. Imitated Cross-agents Communication</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Experiments</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Experimental Setup</a></li>
+<li><a href="#sec-5-2">5.2. Experimental Results</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Conclusion and Future Work</a></li>
+<li><a href="#sec-7">7. References</a></li>
 </ul>
 </div>
 </div>
@@ -18,17 +41,17 @@
 *RTS游戏提供了部分地观察视野，当代理机器人与其他机器人互动在行动空间中，此机器人的活动空间多于GO*
 -   Mastering RTS games requires both strong macro strategies and delicate micro level execution.
 
-*操作RTS游戏要求不仅具有强大的宏观策略，而且具有熟练而细微的水平操作*
+*操作RTS游戏要求不仅具有强大的宏观策略，而且具有熟练而微观层面操作*
 -   Recently, great progress has been made in micro level execution, while complete solutions for macro strategies are still lacking.
 
-*近期，细微的水平操作有了巨大的进步，再此同时宏观策略的解决方案仍然缺乏*
+*近期，微观层面操作有了巨大的进步，再此同时宏观策略的解决方案仍然缺乏*
 -   In this paper, we propose a novel learning-based Hierarchical Macro Strategy model for mastering MOBA games, a sub-genre of RTS games.
 
 *在这个论文中，我们打算将新奇的基于学习分层宏观策略模型用于实时策略的一个领域——MOBA类游戏中*
 -   Trained by the Hierarchical Macro Strategy model, agents explicitly make macro strategy decisions and further guide their micro level execution.
 
-*通过训练这个分层宏观策略模型，游戏机器人清晰地在宏观策略中做出决定，并且更进一步地指导细微的水平操作*
--   Moreover, each of the agents makes independent strategy decisions, while simultaneously communicating with the allies through leveraging a novel imitated cross agent communication mechanism.
+*通过训练这个分层宏观策略模型，游戏机器人清晰地在宏观策略中做出决定，并且更进一步地指导微观层面操作*
+-   Moreover, each of the agents makes independent strategy decisions, while simultaneously communicating with the allies through leveraging a novel imitated cross-agent communication mechanism.
 
 *此外，每一个机器人都能独立的做出决定，同时与盟军进行交流通过新奇的限制来促使反向代理交流机制的改变*
 -   We perform comprehensive evaluations on a popular 5v5 Multiplayer Online Battle Arena (MOBA) game.
@@ -108,3 +131,103 @@
 -   Second, we illustrate our proposed Hierarchical Macro Strategy model.
 -   Then, we present experimental results in the fourth section.
 -   Finally, we conclude and discuss future work.
+
+# Multiplayer Online Battle Arena (MOBA) Games<a id="sec-3" name="sec-3"></a>
+
+## Game Description<a id="sec-3-1" name="sec-3-1"></a>
+
+## Computational Complexity<a id="sec-3-2" name="sec-3-2"></a>
+
+## MOBA AI Macro Strategy Architecture<a id="sec-3-3" name="sec-3-3"></a>
+
+# Hierarchical Macro Strategy Model<a id="sec-4" name="sec-4"></a>
+
+## Model Overview<a id="sec-4-1" name="sec-4-1"></a>
+
+## Attention Layer<a id="sec-4-2" name="sec-4-2"></a>
+
+## Phase layer<a id="sec-4-3" name="sec-4-3"></a>
+
+## Imitated Cross-agents Communication<a id="sec-4-4" name="sec-4-4"></a>
+
+# Experiments<a id="sec-5" name="sec-5"></a>
+
+## Experimental Setup<a id="sec-5-1" name="sec-5-1"></a>
+
+## Experimental Results<a id="sec-5-2" name="sec-5-2"></a>
+
+# Conclusion and Future Work<a id="sec-6" name="sec-6"></a>
+
+-   In this paper, we proposed a novel Hierarchical Macro Strategy model which models macro strategy operation for MOBA games.
+
+*在此论文中，我们提议了一个新奇的分层宏观策略模型，此模型——宏观策略操作用于MOBA类游戏*
+-   HMS explicitly models agents’ attention on game maps and considers game phase modeling.
+
+*HMS清楚地模拟了代理人在游戏中的注意力以及详细规划和考虑游戏分阶段建模*
+-   We also proposed a novel imitated cross-agent communication mechanism which enables agents to cooperate.
+
+*我们也提议了一个新奇的模仿代理之间交流机制使得代理能够合作*
+-   We used Honour of Kings as an example of MOBA games to implement and evaluate HMS.
+
+*我们使用王者荣耀作为MOBA类游戏的一个例子去实现和评估HMS*
+-   We conducted matches between our AI and top 1% human player teams.
+
+*我们在AI与人类1%顶尖队伍之间安排了比赛*
+-   Our AI achieves a 48% winning rate.
+
+*我们的AI获得了48%胜率*
+-   To the best of our knowledge, our proposed HMS model is the first learning based model that explicitly models macro strategy for MOBA games.
+
+*据我们所知，我们提议HMS模型是最好的基于学习的模型，这模型清楚地建模了宏观策略用于MOBA类游戏中*
+-   HMS used supervised learning to learn macro strategy operation and corresponding micro level execution from high quality replays.
+-   A trained HMS model can be further used as an initial policy for reinforcement learning framework.
+-   Our proposed HMS model exhibits a strong potential in MOBA games.
+-   It may be generalized to more RTS games with appropriate adaptations.
+-   For example, the attention layer modeling may be applicable to StarCraft, where the definition of attention can be extended to more meaningful behaviors such as building operation.
+-   Also, Imitated Crossagents Communication can be used to learn to cooperate.
+-   Phase layer modeling is more game-specific.
+-   The resource collection procedure in StarCraft is different from that of MOBA, where gold is mined near the base.
+-   Therefore, phase layer modeling may require game-specific design for different games.
+-   However, the underlying idea to capture game phases can be generalized to Starcraft as well.
+-   HMS may also inspire macro strategy modeling in domains where multiple agents cooperate on a map and historical data is available.
+-   For example, in robot soccer, attention layer modeling and Imitated Cross-agents Communication may help robots position and cooperate given parsed soccer recordings.
+-   In the future, we will incorporate planning based on HMS.
+-   Planning by MCTS roll-outs in Go has been proven essential to outperform top human players (Silver et al. 2016).
+-   We expect planning can be essential for RTS games as well, because it may not only be useful for imperfect information gaming but also be crucial to bringing in expected rewards which supervised learning fails to consider.
+
+# References<a id="sec-7" name="sec-7"></a>
+
+[DeLoura 2001] DeLoura, M. A. 2001. Game programming gems 2. Cengage learning.
+
+[do Nascimento Silva and Chaimowicz 2015] do Nascimento Silva, V., and Chaimowicz, L. 2015. On the development of intelligent agents for moba games. In Computer Games and Digital Entertainment (SBGames), 2015 14th Brazilian Symposium on, 142–151. IEEE. [DOTA2 2018] DOTA2. 2018. The international 2018. <https://www.dota2.com/international/announcement/>.
+
+[Foerster et al. 2016] Foerster, J. N.; Assael, Y. M.; de Freitas, N.; and Whiteson, S. 2016. Learning to communicate to solve riddles with deep distributed recurrent q-networks. arXiv preprint arXiv:1602.02672.
+
+[Hagelbäck and Johansson 2008] Hagelbäck, J., and Johansson, S. J. 2008. The rise of potential fields in real time strategy bots. In Fourth Artificial Intelligence and Interactive Digital Entertainment Conference. Stanford University.
+
+[Jia et al. 2014] Jia, Y.; Shelhamer, E.; Donahue, J.; Karayev, S.; Long, J.; Girshick, R.; Guadarrama, S.; and Darrell, T. 2014. Caffe: Convolutional architecture for fast feature embedding. arXiv preprint arXiv:1408.5093. [Murphy 2015] Murphy, M. 2015. Most played games: November 2015 – fallout 4 and black ops iii arise while starcraft ii shines. <http://caas.raptr.com/most-played-gamesnovember-2015-fallout-4-andblack-ops-iii-arise-whilestarcraft-ii-shines/>.
+
+[Ontanón and Buro 2015] Ontanón, S., and Buro, M. 2015. Adversarial hierarchical-task network planning for complex real-time games. In Twenty-Fourth International Joint Conference on Artificial Intelligence.
+
+[OpenAI 2018a] OpenAI. 2018a. Openai blog: Dota 2. <https://blog.openai.com/dota-2/> (17 Apr 2018). [OpenAI 2018b] OpenAI.
+2018b. Openai five. <https://blog.openai.com/openai-five/> (25 Jun 2018).
+
+[Schulman et al. 2017] Schulman, J.; Wolski, F.; Dhariwal, P.; Radford, A.; and Klimov, O. 2017. Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347.
+
+[Silva and Chaimowicz 2017] Silva, V. D. N., and Chaimowicz, L. 2017. Moba: a new arena for game ai. arXiv preprint arXiv:1705.10443.
+
+[Silver et al. 2016] Silver, D.; Huang, A.; Maddison, C. J.; Guez, A.; Sifre, L.; Van Den Driessche, G.; Schrittwieser, J.; Antonoglou, I.; Panneershelvam, V.; Lanctot, M.; et al. 2016. Mastering the game of go with deep neural networks and tree search. nature 529(7587):484–489.
+
+[Simonite 2018] Simonite, T. 2018. Pro gamers fend off elon musk-backed ai bots—for now.
+<https://www.wired.com/story/pro-gamers-fend-off-elonmusks-ai-bots/> (Aug 23, 2018). [Sukhbaatar, Fergus, and others 2016] Sukhbaatar, S.; Fergus, R.; et al. 2016. Learning multiagent communication with backpropagation. In Advances in Neural Information Processing Systems, 2244–2252. [SuperData 2018] SuperData.
+wide digital games market: February 2018. <https://www.superdataresearch.com/us-digital-gamesmarket/>.
+
+[Synnaeve and Bessiere 2011] Synnaeve, G., and Bessiere, P. 2011. A bayesian model for rts units control applied to starcraft. In Computational Intelligence and Games (CIG), 2011 IEEE Conference on, 190–196. IEEE.
+
+[Tian et al. 2017] Tian, Y.; Gong, Q.; Shang, W.; Wu, Y.; and Zitnick, C. L. 2017. Elf: An extensive, lightweight and flexible research platform for real-time strategy games. In Advances in Neural Information Processing Systems, 2656– 2666.
+
+[Vincent 2018] Vincent, J. 2018. Humans grab victory in first of three dota 2 matches against openai. <https://www.theverge.com/2018/8/23/17772376/openaidota-2-pain-game-human-victory-ai> (Aug 23, 2018).
+
+[Vinyals et al. 2017] Vinyals, O.; Ewalds, T.; Bartunov, S.; Georgiev, P.; Vezhnevets, A. S.; Yeo, M.; Makhzani, A.; Küttler, H.; Agapiou, J.; Schrittwieser, J.; et al. 2017. Starcraft ii: a new challenge for reinforcement learning. arXiv preprint arXiv:1708.04782.
+
+[Wender and Watson 2012] Wender, S., and Watson, I. 2012. Applying reinforcement learning to small scale combat in the real-time strategy game starcraft: Broodwar. In Computational Intelligence and Games (CIG), 2012 IEEE Conference on, 402–408. IEEE.
