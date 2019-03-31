@@ -2,4 +2,5 @@
 - 从2019年3月31号开始
 
 * 目录
-- Hierarchical Macro Strategy Model for MOBA Game AI
+- 'Hierarchical Macro Strategy Model for MOBA Game AI'
+- {用于MOBA类AI的分级宏观策略模型}
