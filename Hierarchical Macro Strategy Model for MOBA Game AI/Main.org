@@ -2,17 +2,17 @@
 - The next challenge of game AI lies in Real Time Strategy (RTS) games.
 /游戏AI的下一个战场在于实时策略游戏/
 - RTS games provide partially observable gaming environments, where agents interact with one another in an action space much larger than that of GO. 
-/RTS游戏提供了部分地观察视野，当代理机器人与其他机器人互动在行动空间中，此机器人的活动空间多于GO/
+/RTS游戏提供了部分地观察视野，当代理与其他代理互动在行动空间中，此代理的活动空间多于GO/
 - Mastering RTS games requires both strong macro strategies and delicate micro level execution. 
-/操作RTS游戏要求不仅具有强大的宏观策略，而且具有熟练而微观层面操作/
+/操作RTS游戏要求不仅具有强大的宏观策略，而且具有熟练地微观层面操作/
 - Recently, great progress has been made in micro level execution, while complete solutions for macro strategies are still lacking. 
-/近期，微观层面操作有了巨大的进步，再此同时宏观策略的解决方案仍然缺乏/
+/近期，微观层面操作有了巨大的进步，再此同时宏观策略的完整的解决方案仍然缺乏/
 - In this paper, we propose a novel learning-based Hierarchical Macro Strategy model for mastering MOBA games, a sub-genre of RTS games. 
-/在这个论文中，我们打算将新奇的基于学习分层宏观策略模型用于实时策略的一个领域——MOBA类游戏中/
+/在这个论文中，我们打算将新颖的基于学习分层宏观策略模型用于控制实时策略的一个领域——MOBA类游戏中/
 - Trained by the Hierarchical Macro Strategy model, agents explicitly make macro strategy decisions and further guide their micro level execution. 
-/通过训练这个分层宏观策略模型，游戏机器人清晰地在宏观策略中做出决定，并且更进一步地指导微观层面操作/
+/通过训练这个分层宏观策略模型，代理清晰地在宏观策略中做出决定，并且更进一步地指导微观层面操作/
 - Moreover, each of the agents makes independent strategy decisions, while simultaneously communicating with the allies through leveraging a novel imitated cross-agent communication mechanism. 
-/此外，每一个机器人都能独立的做出决定，同时与盟军进行交流通过新奇的限制来促使反向代理交流机制的改变/
+/此外，每一个代理都能独立的做出战略性决定，而且同时通过利用新颖的模仿反向代理交流机制与盟军进行交流/
 - We perform comprehensive evaluations on a popular 5v5 Multiplayer Online Battle Arena (MOBA) game.
 /我们在流行的5v5MOBA类游戏中得出了综合的评估/
 - Our 5-AI team achieves a 48% winning rate against human player teams which are ranked top 1% in the player ranking system.
@@ -100,13 +100,13 @@
 ** Experimental Results
 * Conclusion and Future Work
 - In this paper, we proposed a novel Hierarchical Macro Strategy model which models macro strategy operation for MOBA games.
-/在此论文中，我们提议了一个新奇的分层宏观策略模型，此模型——宏观策略操作用于MOBA类游戏/
+/在此论文中，我们提议了一个新颖的分层宏观策略模型，对MOBA游戏的宏观策略操作进行建模/
 - HMS explicitly models agents’ attention on game maps and considers game phase modeling.
-/HMS清楚地模拟了代理人在游戏中的注意力以及详细规划和考虑游戏分阶段建模/
+/HMS清晰地代理人在游戏地图的注意力进行建模以及考虑游戏分阶段模型/
 - We also proposed a novel imitated cross-agent communication mechanism which enables agents to cooperate.
-/我们也提议了一个新奇的模仿代理之间交流机制使得代理能够合作/
+/我们也提议了一个新颖的模仿反向代理交流机制使得代理能够合作/
 - We used Honour of Kings as an example of MOBA games to implement and evaluate HMS.
-/我们使用王者荣耀作为MOBA类游戏的一个例子去实现和评估HMS/
+/我们使用王者荣耀作为MOBA类游戏的一个例子去实践和评估HMS/
 - We conducted matches between our AI and top 1% human player teams.
 /我们在AI与人类1%顶尖队伍之间安排了比赛/
 - Our AI achieves a 48% winning rate.
@@ -114,9 +114,11 @@
 - To the best of our knowledge, our proposed HMS model is the first learning based model that explicitly models macro strategy for MOBA games.
 /据我们所知，我们提议HMS模型是最好的基于学习的模型，这模型清楚地建模了宏观策略用于MOBA类游戏中/
 - HMS used supervised learning to learn macro strategy operation and corresponding micro level execution from high quality replays.
-
+/HMS使用监督学习从高质量重放中去训练宏观策略操作和相应的微观层面执行/
 - A trained HMS model can be further used as an initial policy for reinforcement learning framework.
+/训练过的HMS模型能够更好的使用作为最初的策略对于增强学习框架/
 - Our proposed HMS model exhibits a strong potential in MOBA games.
+/我们提出了HMS模型显示了非常强大的潜力在MOBA游戏中/
 - It may be generalized to more RTS games with appropriate adaptations.
 - For example, the attention layer modeling may be applicable to StarCraft, where the definition of attention can be extended to more meaningful behaviors such as building operation.
 - Also, Imitated Crossagents Communication can be used to learn to cooperate.
