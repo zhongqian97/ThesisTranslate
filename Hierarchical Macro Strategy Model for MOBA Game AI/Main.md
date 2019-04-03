@@ -189,17 +189,41 @@
 
 *我们提出了HMS模型显示了非常强大的潜力在MOBA游戏中*
 -   It may be generalized to more RTS games with appropriate adaptations.
+
+*这可能总结了RTS游戏，他对RTS游戏有着较好的适应性*
 -   For example, the attention layer modeling may be applicable to StarCraft, where the definition of attention can be extended to more meaningful behaviors such as building operation.
+
+*例如，注意力层建模能够适应与星际争霸，注意力的限定能够使得更多有意义的行为例如建立操作*
 -   Also, Imitated Crossagents Communication can be used to learn to cooperate.
+
+*除此之外，模仿反向代理通讯习惯于学习配合*
 -   Phase layer modeling is more game-specific.
+
+*分阶段层建模更加具体于游戏*
 -   The resource collection procedure in StarCraft is different from that of MOBA, where gold is mined near the base.
+
+*星际争霸的资源整合程序不同于其他的moba类游戏，他的黄金是离基地十分之近*
 -   Therefore, phase layer modeling may require game-specific design for different games.
+
+*因此，对于不同的游戏，分阶段层建模可能需要具体游戏具体设计*
 -   However, the underlying idea to capture game phases can be generalized to Starcraft as well.
+
+*然而，捕获游戏阶段的这个根本思想也能够广泛地用于星际争霸*
 -   HMS may also inspire macro strategy modeling in domains where multiple agents cooperate on a map and historical data is available.
+
+*HMS可能也鼓舞了宏观策略建模领域，当在地图上多人代理合作且历史数据可使用*
 -   For example, in robot soccer, attention layer modeling and Imitated Cross-agents Communication may help robots position and cooperate given parsed soccer recordings.
+
+*例如，在机器人足球中，注意力层建模和模仿反向代理通讯可能帮助机器人状况和合作去提供解析的足球记录*
 -   In the future, we will incorporate planning based on HMS.
+
+*在未来，我们将在HMS的基础上纳入计划*
 -   Planning by MCTS roll-outs in Go has been proven essential to outperform top human players (Silver et al. 2016).
+
+*通过在GO中的MCTS实现规划被证实对于击败顶尖人类玩家起到至关重要的一幕*
 -   We expect planning can be essential for RTS games as well, because it may not only be useful for imperfect information gaming but also be crucial to bringing in expected rewards which supervised learning fails to consider.
+
+*我们期望此规划对于RTS游戏也能够起到至关重要,因为它不仅对于不完美信息游戏中有用，而且带来期望在监督学习欠考虑到的奖赏是至关重要的*
 
 # References<a id="sec-7" name="sec-7"></a>
 
