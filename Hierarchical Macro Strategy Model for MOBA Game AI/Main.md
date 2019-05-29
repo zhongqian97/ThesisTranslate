@@ -154,23 +154,55 @@
 *在国际2018年举行的示范赛中，OPENAIFive表现出了与顶级专业DOTA2团队相当的强大团队战斗技能和协调能力。*
 -   OpenAI’s approach did not explicitly model macro strategy and tried to learn the entire game using micro level play.
 
-//
+*OPENAI的研究没有明确地建模了宏观策略而是尝试学习使用微观水平玩整个游戏。*
 -   However, OpenAI Five was not able to defeat professional teams due to weakness in macro strategy management (Vincent 2018; Simonite 2018).
+
+*然而，OPENAIFive没有能够击败专业的队伍由于在宏观策略管理很弱。*
 -   Related work has also been done in explicit macro strategy operation, mostly focused on navigation.
+
+*在明确的宏观策略操作中，相关的工作已经完成，主要集中在导航方面。*
 -   Navigation aims to provide reasonable destination spots and efficient routes for agents.
+
+*导航的目的是为AI提供合理的目的地和有效的路线。*
 -   Most related work in navigation used influence maps or potential fields (DeLoura 2001; Hagelbäck and Johansson 2008; do Nascimento Silva and Chaimowicz 2015).
+
+*在导航中大多数相关工作使用的影响图或者势场。*
 -   Influence maps quantify units using handcrafted equations.
+
+*影响图使用手工制作的方程式量化单位。*
 -   Then, multiple influence maps are fused using rules to provide a single-value output to navigate agents.
+
+*所以，多个影响图结合规则去提供一个单一价值的输出用来导航AI。*
 -   Providing destination is the most important purpose of navigation in terms of macro strategy operation.
+
+*在一些宏观策略操作中，提供目的地是导航最重要的目的。*
 -   The ability to get to the right spots at right time makes essential difference between high level players and the others.
--   Planning has also been used in macro strategy operation.
--   Ontanon et al. proposed Adversarial Hierarchical-Task Network (AHTN) Planning (Ontanón and Buro 2015) to search hierarchical tasks in RTS game playing.
+
+*在正确的时间到达正确的场地的能力在高水平玩家与普通玩家当中是至关重要的。*
+-   Planning has also been used in macro strategy operation. Ontanon et al.
+
+*计划也被使用到宏观策略操作中。*
+-   proposed Adversarial Hierarchical-Task Network (AHTN) Planning (Ontanón and Buro 2015) to search hierarchical tasks in RTS game playing.
+
+*提出了在RTS游戏中对抗性分层任务网络规划用来搜索分层任务。*
 -   Although AHTN shows promising results in a mini-RTS game, it suffers from efficiency issue which makes it difficult to apply to full MOBA games directly.
+
+*尽管AHTN在迷你RTS游戏中显示出有希望的结果，但它存在效率问题，难以直接应用于完整的MOBA类游戏中。*
 -   Despite of the rich and promising literature, previous work in macro strategy failed to provide complete solution:
+
+*尽管文献丰富，前景广阔，但以往的宏观战略研究未能提供完整的解决方案。*
 -   First, reasoning macro strategy implicitly by learning upon micro level action space may be too difficult.
+
+*第一，通过学习微观水平行动空间获得隐含有意义的宏观策略可能太困难。*
 -   OpenAI Five’s ability gap between micro level execution and macro strategy operation was obvious.
+
+*OPENAIFive的能力差距在微观水平实现与宏观策略操作之间是可观测的。*
 -   It might be over-optimistic to leave models to figure out high level strategies by simply looking at micro level actions and rewards.
+
+*仅仅通过观察微观层面的行动和奖励，让模型去制定高层次的战略可能过于乐观。*
 -   We consider explicit macro strategy level modeling to be necessary.
+
+*我们认为明确的宏观战略层面建模是必要的。*
 -   Second, previous work on explicit macro strategy heavily relied on handcrafted equations for influence maps/potential fields computation and fusion.
 -   In practice, there are usually thousands of numerical parameters to manually decide, which makes it nearly impossible to achieve good performance.
 -   Planning methods on the other hand cannot meet efficiency requirement of full MOBA games.
