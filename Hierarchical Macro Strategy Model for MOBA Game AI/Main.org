@@ -19,31 +19,57 @@
 /我们的五AI队伍获得了48%的胜率在对抗人类玩家队伍，这些人类队伍在排名系统中位于1%/
 * Introduction
 - Light has been shed on artificial general intelligence after AlphaGo defeated world GO champion Lee Seedol (Silver et al. 2016). 
+/在阿尔法GO击败世界围棋冠军李·西多尔后，通用人工智能的光芒已经散去。/
 - Since then, game AI has drawn unprecedented attention from not only researchers but also the public. 
+/从那时起，游戏AI引起了前所未有的关注，不仅仅是研究人员，还有公众。/
 - Game AI aims much more than robots playing games. 
+/游戏AI目的不只只是机器人玩游戏。/
 - Rather, games provide ideal environments that simulate the real world.
+/在某种程度上，游戏提供模拟现实世界的理想环境/
 - AI researchers can conduct experiments in games, and transfer successful AI ability to the real world. 
+/AI研究人员可以在游戏中进行实验，并且将成功的AI能力转换到现实世界。/
 - Although AlphaGo is a milestone to the goal of general AI, the class of problems it represents is still simple compared to the real world. 
+/尽管阿尔法GO是实现通用人工智能目标的一个里程碑，与现实世界相比，它所代表的问题类别仍然很简单。/
 - Therefore, recently researchers have put much attention to real time strategy (RTS) games such as Defense of the Ancients (Dota) (OpenAI 2018a) and StarCraft (Vinyals et al. 2017; Tian et al. 2017), which represents a class of problems with next level complexity. 
+/因此，最近研究者将注意力放在了实时战略游戏比如古代防御和星际争霸，它表示一类具有下一级复杂性的问题。/
 - Dota is a famous set of science fiction 5v5 Multiplayer Online Battle Arena (MOBA) games. 
+/古代防御是有名的一套科幻5v5多人在线竞技场游戏。/
 - Each player controls one unit and cooperate with four allies to defend allies’ turrets, attack enemies’ turrets, collect resources by killing creeps, etc. The goal is to destroy enemies’ base.
+/每一个玩家都控制一个单位，与四个盟友合作将保卫同盟的塔，攻击敌方的塔，通过击杀对手来收集资源，他们的目标是摧毁敌方基地。/
 - There are four major aspects that make RTS games much more difficult compared to GO: 
+/相比较于GO，有四个主要方面使得实时策略游戏更加复杂：/
 - 1) Computational complexity.
-- The computational complexity in terms of action space or state space of RTS games can be up to 1020,000, while the complexity of GO is about 10250 (OpenAI 2018b).
+/可计算复杂度。/
+- The computational complexity in terms of action space or state space of RTS games can be up to 10^20,000, while the complexity of GO is about 10^250 (OpenAI 2018b).
+/在RTS游戏的状态空间和行动空间，可计算复杂度超过10^20,000，而GO的复杂度大约在10^250/
 - 2) Multi-agent.
+/多智能体。/
 - Playing RTS games usually involves multiple agents. It is crucial for multiple agents to coordinate and cooporate. 
+/玩RTS游戏通常涉及到多个智能体。多个智能体之间的合作与协调是非常重要的。/
 - 3) Imperfect information.
+/不完美信息。/
 - Different to GO, many RTS games make use of fog of war (Vinyals et al. 2017) to increase game uncertainty.
+/不同于GO，许多的RTS游戏使用了战争迷雾来提升游戏的不确定性。/
 - When the game map is not fully observable, it is essential to consider gaming among one another.
+/当游戏地图不是完全可观测的，考虑彼此之间的博弈是很有必要的。/
 - 4) Sparse and delayed rewards.
+/稀疏和延时奖励。/
 - Learning upon game rewards in GO is challenging because the rewards are usually sparse and delayed.
+/在GO上学习游戏奖励是有挑战性的，因为奖赏通常是稀疏和延时的。/
 - RTS game length could often be larger than 20,000 frames, while each GO game is usually no more than 361 steps. 
+/RTS游戏的长度通常超过20,000帧，而游戏GO通常不到361步。/
 - To master RTS games, players need to have strong skills in both macro strategy operation and micro level execution. 
+/掌握RTS游戏，玩家需要有强大的技术在宏观策略操作和微观水平实施上。/
 - In recent study, much attention and attempts have been put to micro level execution (Vinyals et al. 2017; Tian et al. 2017; Synnaeve and Bessiere 2011; Wender and Watson 2012). 
+/在近期研究中，更多的关注和测试都是放在微观水平实施当中。/
 - So far, Dota2 AI developed by OpenAI using reinforcement learning, i.e., OpenAI Five, has made the most advanced progress (OpenAI 2018a). 
+/至今为止，基于增强学习的OPENAi开发的DOTA2的AI有了更多的进步。/
 - OpenAI Five was trained directly on micro level action space using proximal policy optimization algorithms along with team rewards (Schulman et al. 2017). 
+/OPENAIFive被直接训练在微观水平行动空间，用了近端策略优化算法随同团队奖赏。/
 - OpenAI Five has shown strong teamfights skills and coordination comparable to top professional Dota2 teams during a demonstration match held in The International 2018 (DOTA2 2018). 
+/在国际2018年举行的示范赛中，OPENAIFive表现出了与顶级专业DOTA2团队相当的强大团队战斗技能和协调能力。/
 - OpenAI’s approach did not explicitly model macro strategy and tried to learn the entire game using micro level play. 
+//
 - However, OpenAI Five was not able to defeat professional teams due to weakness in macro strategy management (Vincent 2018; Simonite 2018). 
 - Related work has also been done in explicit macro strategy operation, mostly focused on navigation. 
 - Navigation aims to provide reasonable destination spots and efficient routes for agents. 
